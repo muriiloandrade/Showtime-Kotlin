@@ -8,6 +8,7 @@ import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.showtime.R
 import com.showtime.model.Series
+import com.showtime.presenter.SeriesDetailsPresenter
 
 class SeriesDetails : AppCompatActivity(), IMain {
 
@@ -27,7 +28,7 @@ class SeriesDetails : AppCompatActivity(), IMain {
     }
 
     lateinit var progressBar: ProgressBar
-    lateinit var detailsPresenter: SeriesPresenter
+    lateinit var detailsPresenter: SeriesDetailsPresenter
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,7 +36,7 @@ class SeriesDetails : AppCompatActivity(), IMain {
         setContentView(R.layout.series_details)
 
         progressBar = progress_bar_details
-        detailsPresenter = SeriesPresenter(this)
+        detailsPresenter = SeriesDetailsPresenter(this)
         detailsPresenter.getDataFromModel()
 
         getIncomingIntent()

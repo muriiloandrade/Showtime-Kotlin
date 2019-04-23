@@ -20,7 +20,7 @@ data class Series(var poster_path: String, var popularity: Int, var id: Int, var
 
         responseCall.enqueue(object : Callback<AllSeriesResponse> {
             override fun onResponse(call: Call<AllSeriesResponse>?, response: Response<AllSeriesResponse>?) {
-                listener.onSuccess(response!!.body().results)
+                listener.onSuccess(response!!.body()!!.results)
             }
 
             override fun onFailure(call: Call<AllSeriesResponse>?, t: Throwable?) {

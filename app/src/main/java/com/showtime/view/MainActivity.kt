@@ -9,6 +9,7 @@ import android.widget.ProgressBar
 import android.widget.Toast
 import com.showtime.R
 import com.showtime.model.Series
+import com.showtime.presenter.SeriesPresenter
 
 class MainActivity : AppCompatActivity(), IMain {
 
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity(), IMain {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         progressBar = this.progress_bar
-        var presenter = Presenter(this)
+        var presenter = SeriesPresenter(this)
         presenter.getDataFromModel()
 
     }
