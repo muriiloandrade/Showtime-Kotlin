@@ -21,4 +21,5 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="fazer_login">Fazer Login?\nClique aqui</string>
+    <string name="series_name">Series Name</string>
 </resources>

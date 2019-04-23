@@ -1,0 +1,70 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <ProgressBar
+                android:id="@+id/progress_bar_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+        <!--Handeled pharmacy Image-->
+
+        <ImageView
+                android:id="@+id/series_poster_details"
+                android:layout_width="383dp"
+                android:layout_height="300dp" />
+
+
+        <LinearLayout
+                android:id="@+id/details_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#397583"
+                android:elevation="4dp"
+                android:orientation="vertical">
+
+
+            <!--pharmacy Name-->
+
+            <TextView
+                    android:id="@+id/series_title_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/series_name"
+                    android:textColor="#fff"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+        <!--pharmacy Address-->
+
+
+        <!--pharmacy Telephone-->
+
+
+        <TextView
+                android:id="@+id/series_overview_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="overview"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+
+
+
+    </LinearLayout>
+</ScrollView>

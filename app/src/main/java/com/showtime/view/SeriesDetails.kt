@@ -9,6 +9,7 @@ import com.bumptech.glide.Glide
 import com.showtime.R
 import com.showtime.model.Series
 import com.showtime.presenter.SeriesDetailsPresenter
+import kotlinx.android.synthetic.main.activity_series_details.*
 
 class SeriesDetails : AppCompatActivity(), IMain {
 
@@ -33,7 +34,7 @@ class SeriesDetails : AppCompatActivity(), IMain {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.series_details)
+        setContentView(R.layout.activity_series_details)
 
         progressBar = progress_bar_details
         detailsPresenter = SeriesDetailsPresenter(this)
@@ -44,29 +45,24 @@ class SeriesDetails : AppCompatActivity(), IMain {
 
     private fun getIncomingIntent() {
         if (intent.hasExtra("seriesTitle")
-            && intent.hasExtra("seriesDate")
             && intent.hasExtra("seriesOverview")
             && intent.hasExtra("posterImage")) {
 
             val seriesTitle = intent.getStringExtra("seriesTitle")
 
-            val seriesDate = intent.getStringExtra("seriesDate")
-
             val seriesOverview = intent.getStringExtra("seriesOverview")
 
             val posterImage = intent.getStringExtra("posterImage")
 
-            setDetails(posterImage, seriesTitle, seriesDate, seriesOverview)
+            setDetails(posterImage, seriesTitle, seriesOverview)
         }
     }
 
 
-    private fun setDetails(imageUrl: String, seriesTitle: String, seriesDate: String, seriesOverview: String) {
+    private fun setDetails(imageUrl: String, seriesTitle: String,  seriesOverview: String) {
         val title = series_title_details
         title.text = seriesTitle
 
-        val date = series_date_details
-        date.text = seriesDate
 
         val overview = series_overview_details
         overview.text = seriesOverview
