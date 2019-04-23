@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">Showtime</string>
+    <string name="digite_seu_email">Digite seu email</string>
+    <string name="digite_sua_senha">Digite sua senha</string>
+    <string name="digite_seu_nome">Digite seu nome</string>
+    <string name="botaoCadastrar">Cadastrar-se</string>
+    <string name="botaoVoltar">Voltar</string>
+    <string name="botaoLogin">Login</string>
+    <string name="firstMessage">Know your own series</string>
+    <string name="esqueceuSenha">Esqueceu sua senha?</string>
+    <string name="login">Login</string>
+    <string name="botaoUserList">Usuarios</string>
+    <string name="botaoEsqueceuSenha">Resgatar Senha</string>
+    <string name="title_activity_user_login">Login</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="fazer_login">Fazer Login?\nClique aqui</string>
 </resources>

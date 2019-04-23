@@ -2,13 +2,13 @@ package com.showtime.presenter
 
 import com.showtime.model.Series
 import com.showtime.model.OnDataListener
-import com.showtime.view.MainActivity
+import com.showtime.view.GetAllSeriesActivity
 
 class SeriesPresenter : IPresenter {
-    var view: MainActivity? = null
+    var view: GetAllSeriesActivity? = null
     var model: Series? = null
 
-    constructor(view: MainActivity?) {
+    constructor(view: GetAllSeriesActivity?) {
         this.view = view
         model = Series("", 0, 0, "", "", "", "", "")
         view!!.showProgress()

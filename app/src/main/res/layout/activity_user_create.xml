@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimaryBackground"
+                tools:context=".view.UserCreateActivity">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/linearLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:text="@string/botaoCadastrar"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+            android:textColor="@color/colorFormBackground" android:textAlignment="center"/>
+
+    <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorFormBackground"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+        <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:drawablePadding="5dp"
+                android:hint="@string/digite_seu_nome"
+                android:inputType="textPersonName" tools:ignore="Autofill"/>
+
+        <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:hint="@string/digite_seu_email"
+                android:inputType="textEmailAddress" tools:ignore="Autofill"/>
+
+        <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:drawablePadding="5dp"
+                android:hint="@string/digite_sua_senha"
+                android:inputType="textPassword" tools:ignore="Autofill"/>
+
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_marginTop="4dp"
+            android:layout_alignParentEnd="false" android:layout_alignParentStart="false"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp" android:layout_centerHorizontal="true" android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" android:layout_below="@+id/linearLayout" android:id="@+id/LinearLayout">
+        <TextView
+                android:id="@+id/textViewLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:lineSpacingExtra="7dp"
+                android:textAlignment="center"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorFormBackground" android:clickable="true"
+                android:text="@string/fazer_login"/>
+        <Button
+                android:id="@+id/buttonSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorPrimaryDark"
+                android:text="@string/botaoCadastrar"
+                android:textAllCaps="false"
+                android:textColor="@color/colorFormBackground"
+                android:textSize="14sp"/>
+        <Button
+                android:id="@+id/btn_voltar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:text="@string/botaoVoltar"
+                android:textAllCaps="false"
+                android:textColor="@color/colorFormBackground"
+                android:textSize="14sp"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

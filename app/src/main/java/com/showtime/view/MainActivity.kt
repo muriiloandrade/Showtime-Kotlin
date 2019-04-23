@@ -1,44 +1,36 @@
 package com.showtime.view
 
-import android.os.Bundle
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
-import android.view.View
-import android.widget.ProgressBar
-import android.widget.Toast
+import android.os.Bundle
+import android.widget.Button
 import com.showtime.R
-import com.showtime.model.Series
-import com.showtime.presenter.SeriesPresenter
+import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity(), IMain {
+class MainActivity : AppCompatActivity() {
 
-    lateinit var progressBar: ProgressBar
+    var botaoCadastrar: Button? = null;
+    var botaoLogar: Button? = null;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        progressBar = this.progress_bar
-        var presenter = SeriesPresenter(this)
-        presenter.getDataFromModel()
 
-    }
+        message.text = "Uma frase legal que pode ser mudada facilmente"
 
-    override fun showProgress() {
-        progressBar.visibility = View.VISIBLE
-    }
+        botaoCadastrar = findViewById(R.id.btn_cadastrar_init) //referência do botão
+        botaoLogar = findViewById(R.id.btn_login_init) //referência do botão
 
-    override fun hideProgress() {
-        progressBar.visibility = View.GONE
-    }
 
-    override fun updateView(seriesList: List<Series>) {
-        var recyclerView: RecyclerView = recycler_view
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.setAdapter(applicationContext.let { SeriesAdapter(R.layout.row_layout, seriesList, this) })
-    }
+        botaoCadastrar?.setOnClickListener {
+            var clickintent = Intent(this@MainActivity, UserCreateActivity::class.java)
+            startActivity(clickintent)
+        }
 
-    override fun viewError(msg: String) {
-        Toast.makeText(this, "" + msg, Toast.LENGTH_SHORT)
+        botaoLogar?.setOnClickListener {
+            var clicklog = Intent(this@MainActivity, UserLoginActivity::class.java)
+            startActivity(clicklog)
+        }
+
     }
 }
