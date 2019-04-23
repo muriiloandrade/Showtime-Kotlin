@@ -9,8 +9,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    var botaoCadastrar: Button? = null;
-    var botaoLogar: Button? = null;
+    var botaoCadastrar: Button? = null
+    var botaoLogar: Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
