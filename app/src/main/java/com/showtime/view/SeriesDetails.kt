@@ -7,6 +7,7 @@ import android.widget.ProgressBar
 import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.showtime.R
+import com.showtime.model.Series
 
 class SeriesDetails : AppCompatActivity(), IMain {
 

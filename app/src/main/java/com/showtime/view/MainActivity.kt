@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.ProgressBar
 import android.widget.Toast
 import com.showtime.R
+import com.showtime.model.Series
 
 class MainActivity : AppCompatActivity(), IMain {
 
