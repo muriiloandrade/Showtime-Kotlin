@@ -6,7 +6,7 @@ import com.showtime.view.SeriesDetails
 
 class SeriesDetailsPresenter : IPresenter {
     var model: Series
-    var view: MovieDetails
+    var view: SeriesDetails
 
     constructor(view: SeriesDetails) {
         this.view = view
@@ -15,13 +15,13 @@ class SeriesDetailsPresenter : IPresenter {
     }
 
     override fun getDataFromModel() {
-        model.getAllSeries(object: OnDataListener {
-            override fun onSucess(seriesList: List<Series>){
+        model.getSeries(object: OnDataListener {
+            override fun onSuccess(seriesList: List<Series>){
                 view.hideProgress()
                 view.updateView(seriesList)
             }
 
-            override onFailure(msg: String){
+            override fun onFailure(msg: String){
                 view.hideProgress()
                 view.viewError(msg)
             }

@@ -10,13 +10,13 @@ class SeriesPresenter : IPresenter {
 
     constructor(view: MainActivity?) {
         this.view = view
-        model = Series()
+        model = Series("", 0, 0, "", "", "", "", "")
         view!!.showProgress()
     }
 
     override fun getDataFromModel() {
         model!!.getSeries(object : OnDataListener {
-            override fun onSucess(seriesList: List<Series>){
+            override fun onSuccess(seriesList: List<Series>){
                 view!!.hideProgress()
                 view!!.updateView(seriesList)
             }
