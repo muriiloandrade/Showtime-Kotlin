@@ -13,7 +13,7 @@
             android:id="@+id/series_poster"
             android:layout_width="70dp"
             android:layout_height="72dp"
-            android:src="@drawable/ic_launcher_background" />
+            android:src="@drawable/ic_launcher_background"/>
 
     <LinearLayout
             android:layout_width="0dp"
@@ -29,7 +29,7 @@
                 android:paddingRight="16dp"
                 android:text="Series Title"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
 
         <TextView
@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="3"
                 android:paddingRight="16dp"
-                android:text="Description" />
+                android:text="Description"/>
 
     </LinearLayout>
 
