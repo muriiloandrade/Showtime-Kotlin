@@ -10,7 +10,7 @@ class SeriesPresenter : IPresenter {
 
     constructor(view: GetAllSeriesActivity?) {
         this.view = view
-        model = Series("", 0, 0, "", "", "", "", "")
+        model = Series("", 0.0, 0, "", "", "", "", "")
         view!!.showProgress()
     }
 

@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_series_details.*
 
 class SeriesDetails : AppCompatActivity(), IMain {
 
-    override fun showProgress() {
+   override fun showProgress() {
         progressBar.visibility = View.VISIBLE
     }
 

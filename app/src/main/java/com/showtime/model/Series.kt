@@ -7,7 +7,7 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-data class Series(var poster_path: String, var popularity: Int, var id: Int, var overview: String?, var first_air_date: String, var name: String, var original_name: String,  var release_date: String) : IModel {
+data class Series(var poster_path: String, var popularity: Double, var id: Int, var overview: String?, var first_air_date: String, var name: String, var original_name: String,  var release_date: String) : IModel {
 
     override fun getSeries(listener: OnDataListener) {
 

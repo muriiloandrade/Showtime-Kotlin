@@ -12,6 +12,7 @@ interface MovieDBApiInterface{
 //    @GET("movie/{id}")
 //    abstract fun getMovieDetails(@Path("id") id: Int, @Query("api_key") apiKey: String): Call<MoviesResponse>
 
-    @GET("/discover/tv")
-    fun getAllSeries(@Query("api_key") apiKey: String,language: String, sort_by: String, page: Int ): Call<AllSeriesResponse>
+    @GET("discover/tv")
+    fun getAllSeries(@Query("api_key") apiKey: String, @Query("language") language: String, @Query("sort_by") sort_by: String,@Query("page") page: Int ): Call<AllSeriesResponse>
+
 }

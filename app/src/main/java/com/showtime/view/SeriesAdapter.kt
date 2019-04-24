@@ -11,7 +11,6 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.showtime.model.Series
-import kotlinx.android.synthetic.main.activity_getallseries.view.*
 import kotlinx.android.synthetic.main.row_layout.view.*
 
 

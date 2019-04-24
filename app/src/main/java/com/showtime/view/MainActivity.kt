@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        message.text = "Uma frase legal que pode ser mudada facilmente"
+        message.text = "SE FODEU"
 
         botaoCadastrar = findViewById(R.id.btn_cadastrar_init) //referência do botão
         botaoLogar = findViewById(R.id.btn_login_init) //referência do botão

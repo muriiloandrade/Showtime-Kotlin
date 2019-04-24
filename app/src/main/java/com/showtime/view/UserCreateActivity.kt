@@ -27,8 +27,8 @@ class UserCreateActivity : AppCompatActivity() {
         }
 
         botaoLogar?.setOnClickListener {
-            var clickintent = Intent(this@UserCreateActivity, UserLoginActivity::class.java)
-            startActivity(clickintent)
+            var clickget = Intent(this@UserCreateActivity, GetAllSeriesActivity::class.java)
+            startActivity(clickget)
         }
     }
 }
