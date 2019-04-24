@@ -16,7 +16,7 @@ data class Series(var poster_path: String, var popularity: Double, var id: Int, 
                 .build()
 
         val client = retrofit.create(MovieDBApiInterface::class.java)
-        val responseCall = client.getAllSeries("835003cab26ff0669db7cbcd0de43a6a", "pt_BR", "popularity.desc", 1)
+        val responseCall = client.getAllSeries("835003cab26ff0669db7cbcd0de43a6a", "pt-BR", "popularity.desc", 1)
 
         responseCall.enqueue(object : Callback<AllSeriesResponse> {
             override fun onResponse(call: Call<AllSeriesResponse>?, response: Response<AllSeriesResponse>?) {
