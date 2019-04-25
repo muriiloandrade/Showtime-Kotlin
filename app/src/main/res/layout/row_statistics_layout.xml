@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_vertical"
+              android:minHeight="72dp"
+              android:id="@+id/linear_layout" android:orientation="vertical"
+              android:padding="16dp"
+              tools:context=".view.StatisticsActivity">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+        <TextView
+                android:id="@+id/statistic_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:paddingRight="16dp"
+                android:layout_marginRight="80dp"
+                android:text="Series Title"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        <TextView
+                android:id="@+id/valor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_gravity="end"
+                android:paddingRight="10dp"
+                android:textSize="16sp"
+                android:text="Valor"/>
+
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+        <TextView
+                android:id="@+id/statistic_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:paddingRight="16dp"
+                android:layout_marginRight="80dp"
+                android:text="Series Title"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        <TextView
+                android:id="@+id/valor1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_gravity="end"
+                android:paddingRight="10dp"
+                android:textSize="16sp"
+                android:text="Valor"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

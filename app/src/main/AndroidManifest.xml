@@ -18,6 +18,9 @@
         <activity android:screenOrientation="portrait" android:name=".view.SeriesDetails">
         </activity>
 
+        <activity android:screenOrientation="portrait" android:name=".view.StatisticsActivity">
+        </activity>
+
         <activity android:screenOrientation="portrait" android:name=".view.UserLoginActivity">
         </activity>
 

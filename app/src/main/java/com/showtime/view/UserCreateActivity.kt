@@ -38,7 +38,7 @@ class UserCreateActivity : AppCompatActivity() {
         }
 
         botaoLogar?.setOnClickListener {
-            var clickget = Intent(this@UserCreateActivity, GetAllSeriesActivity::class.java)
+            var clickget = Intent(this@UserCreateActivity, UserLoginActivity::class.java)
             startActivity(clickget)
         }
 
@@ -69,7 +69,7 @@ class UserCreateActivity : AppCompatActivity() {
             val newUser = User(nome, email, senha)
 
             val retrofit = Retrofit.Builder().addConverterFactory(GsonConverterFactory.create())
-                .baseUrl("http://192.168.1.10:5000/api/v1/users/")
+                .baseUrl("http://10.0.2.2:5000/api/v1/users/")
                 .build()
 
             val client = retrofit.create(ShowtimeApiInterface::class.java)
