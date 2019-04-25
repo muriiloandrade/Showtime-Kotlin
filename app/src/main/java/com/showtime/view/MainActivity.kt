@@ -16,19 +16,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        message.text = "O melhor app de series da humanidade humana"
+        message.text = "O melhor app de séries da humanidade humana"
 
         botaoCadastrar = findViewById(R.id.btn_cadastrar_init) //referência do botão
         botaoLogar = findViewById(R.id.btn_login_init) //referência do botão
 
 
         botaoCadastrar?.setOnClickListener {
-            var clickintent = Intent(this@MainActivity, UserCreateActivity::class.java)
+            val clickintent = Intent(this@MainActivity, UserCreateActivity::class.java)
             startActivity(clickintent)
         }
 
         botaoLogar?.setOnClickListener {
-            var clicklog = Intent(this@MainActivity, UserLoginActivity::class.java)
+            val clicklog = Intent(this@MainActivity, UserLoginActivity::class.java)
             startActivity(clicklog)
         }
     }

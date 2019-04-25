@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_series_details.*
 
 class SeriesDetails : AppCompatActivity(), IMain {
 
-   override fun showProgress() {
+    override fun showProgress() {
         progressBar.visibility = View.VISIBLE
     }
 
@@ -46,7 +46,8 @@ class SeriesDetails : AppCompatActivity(), IMain {
     private fun getIncomingIntent() {
         if (intent.hasExtra("seriesTitle")
             && intent.hasExtra("seriesOverview")
-            && intent.hasExtra("posterImage")) {
+            && intent.hasExtra("posterImage")
+        ) {
 
             val seriesTitle = intent.getStringExtra("seriesTitle")
 
@@ -59,7 +60,7 @@ class SeriesDetails : AppCompatActivity(), IMain {
     }
 
 
-    private fun setDetails(imageUrl: String, seriesTitle: String,  seriesOverview: String) {
+    private fun setDetails(imageUrl: String, seriesTitle: String, seriesOverview: String) {
         val title = series_title_details
         title.text = seriesTitle
 
