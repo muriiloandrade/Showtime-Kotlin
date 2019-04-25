@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        message.text = "SE FODEU"
+        message.text = "O melhor app de series da humanidade humana"
 
         botaoCadastrar = findViewById(R.id.btn_cadastrar_init) //referência do botão
         botaoLogar = findViewById(R.id.btn_login_init) //referência do botão
@@ -31,6 +31,5 @@ class MainActivity : AppCompatActivity() {
             var clicklog = Intent(this@MainActivity, UserLoginActivity::class.java)
             startActivity(clicklog)
         }
-
     }
 }
