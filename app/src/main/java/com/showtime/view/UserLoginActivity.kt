@@ -54,7 +54,7 @@ class UserLoginActivity : AppCompatActivity() {
             val userToLogin = UserLogin(email, senha)
 
             val retrofit = Retrofit.Builder().addConverterFactory(GsonConverterFactory.create())
-                .baseUrl("http://10.0.2.2:5000/api/v1/users/")
+                .baseUrl("http://192.168.0.42:5000/api/v1/users/")
                 .build()
 
             val client = retrofit.create(ShowtimeApiInterface::class.java)

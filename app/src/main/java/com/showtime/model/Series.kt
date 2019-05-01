@@ -7,13 +7,22 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-data class Series(var poster_path: String, var popularity: Double, var id: Int, var overview: String?, var first_air_date: String, var name: String, var original_name: String,  var release_date: String) : IModel {
+data class Series(
+    var poster_path: String,
+    var popularity: Double,
+    var id: Int,
+    var overview: String?,
+    var first_air_date: String,
+    var name: String,
+    var original_name: String,
+    var release_date: String
+) : IModel {
 
     override fun getSeries(listener: OnDataListener) {
 
         val retrofit = Retrofit.Builder().addConverterFactory(GsonConverterFactory.create())
-                .baseUrl("http://api.themoviedb.org/3/")
-                .build()
+            .baseUrl("http://api.themoviedb.org/3/")
+            .build()
 
         val client = retrofit.create(MovieDBApiInterface::class.java)
         val responseCall = client.getAllSeries("835003cab26ff0669db7cbcd0de43a6a", "pt-BR", "popularity.desc", 1)
@@ -21,6 +30,26 @@ data class Series(var poster_path: String, var popularity: Double, var id: Int, 
         responseCall.enqueue(object : Callback<AllSeriesResponse> {
             override fun onResponse(call: Call<AllSeriesResponse>?, response: Response<AllSeriesResponse>?) {
                 listener.onSuccess(response!!.body()!!.results)
+            }
+
+            override fun onFailure(call: Call<AllSeriesResponse>?, t: Throwable?) {
+                listener.onFailure(t!!.message.toString())
+            }
+        })
+    }
+
+    override fun searchSeries(listener: OnDataListener) {
+
+        val retrofit = Retrofit.Builder().addConverterFactory(GsonConverterFactory.create())
+            .baseUrl("http://api.themoviedb.org/3/")
+            .build()
+
+        val client = retrofit.create(MovieDBApiInterface::class.java)
+        val responseCall = client.searchSeries("835003cab26ff0669db7cbcd0de43a6a", "pt-BR", "game")
+
+        responseCall.enqueue(object : Callback<AllSeriesResponse> {
+            override fun onResponse(call: Call<AllSeriesResponse>?, response1: Response<AllSeriesResponse>?) {
+                listener.onSuccess(response1!!.body()!!.results)
             }
 
             override fun onFailure(call: Call<AllSeriesResponse>?, t: Throwable?) {
