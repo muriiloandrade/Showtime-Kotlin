@@ -29,11 +29,11 @@ data class Series(
 
         responseCall.enqueue(object : Callback<AllSeriesResponse> {
             override fun onResponse(call: Call<AllSeriesResponse>?, response: Response<AllSeriesResponse>?) {
-                listener.onSuccess(response!!.body()!!.results)
+                listener.onSuccess(response?.body()!!.results)
             }
 
             override fun onFailure(call: Call<AllSeriesResponse>?, t: Throwable?) {
-                listener.onFailure(t!!.message.toString())
+                listener.onFailure(t?.message.toString())
             }
         })
     }
@@ -48,12 +48,12 @@ data class Series(
         val responseCall = client.searchSeries("835003cab26ff0669db7cbcd0de43a6a", "pt-BR", "game")
 
         responseCall.enqueue(object : Callback<AllSeriesResponse> {
-            override fun onResponse(call: Call<AllSeriesResponse>?, response1: Response<AllSeriesResponse>?) {
-                listener.onSuccess(response1!!.body()!!.results)
+            override fun onResponse(call: Call<AllSeriesResponse>?, response: Response<AllSeriesResponse>?) {
+                listener.onSuccess(response?.body()!!.results)
             }
 
             override fun onFailure(call: Call<AllSeriesResponse>?, t: Throwable?) {
-                listener.onFailure(t!!.message.toString())
+                listener.onFailure(t?.message.toString())
             }
         })
     }

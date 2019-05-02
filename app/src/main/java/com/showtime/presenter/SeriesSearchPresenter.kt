@@ -12,7 +12,7 @@ class SeriesSearchPresenter : IPresenter {
     constructor(view: SearchSeriesActivity) {
         this.view = view
         model = Series("", 0.0, 0, "", "", "", "", "")
-        view?.showProgress()
+        view.showProgress()
     }
 
     override fun getDataFromModel() {

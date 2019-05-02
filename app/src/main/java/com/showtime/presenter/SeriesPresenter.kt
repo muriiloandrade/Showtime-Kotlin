@@ -19,7 +19,7 @@ class SeriesPresenter : IPresenter {
         model?.getSeries(object : OnDataListener {
             override fun onSuccess(seriesList: List<Series>) {
                 view?.hideProgress()
-                view!!.updateView(seriesList)
+                view?.updateView(seriesList)
             }
 
             override fun onFailure(msg: String) {

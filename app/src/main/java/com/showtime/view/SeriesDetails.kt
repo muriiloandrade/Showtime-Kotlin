@@ -12,7 +12,6 @@ import com.showtime.presenter.SeriesDetailsPresenter
 import kotlinx.android.synthetic.main.activity_series_details.*
 
 class SeriesDetails : AppCompatActivity(), IMain {
-
     override fun showProgress() {
         progressBar.visibility = View.VISIBLE
     }
@@ -30,7 +29,6 @@ class SeriesDetails : AppCompatActivity(), IMain {
 
     lateinit var progressBar: ProgressBar
     lateinit var detailsPresenter: SeriesDetailsPresenter
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,7 +56,6 @@ class SeriesDetails : AppCompatActivity(), IMain {
             setDetails(posterImage, seriesTitle, seriesOverview)
         }
     }
-
 
     private fun setDetails(imageUrl: String, seriesTitle: String, seriesOverview: String) {
         val title = series_title_details
