@@ -13,7 +13,9 @@ import com.bumptech.glide.Glide
 import com.showtime.model.Series
 import kotlinx.android.synthetic.main.row_layout.view.*
 
+
 open class SeriesAdapter : RecyclerView.Adapter<SeriesAdapter.SeriesViewHolder> {
+
     var rowLayout: Int = 0
     var series: List<Series>
     var context: Context
@@ -34,8 +36,8 @@ open class SeriesAdapter : RecyclerView.Adapter<SeriesAdapter.SeriesViewHolder> 
     }
 
     override fun onBindViewHolder(p0: SeriesViewHolder, p1: Int) {
-        p0.title.text = series[p1].original_name
-        p0.description.text = series[p1].overview
+        p0.title.text = series.get(p1).original_name
+        p0.description.text = series.get(p1).overview
 
         Glide.with(context).load("http://image.tmdb.org/t/p/w185//" + series[p1].poster_path).into(p0.seriesPoster)
 
@@ -48,6 +50,8 @@ open class SeriesAdapter : RecyclerView.Adapter<SeriesAdapter.SeriesViewHolder> 
                 p0.context.startActivity(intent)
             }
         })
+
+
     }
 
     open class SeriesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -55,5 +59,7 @@ open class SeriesAdapter : RecyclerView.Adapter<SeriesAdapter.SeriesViewHolder> 
         var description: TextView = itemView.overview
         var seriesPoster: ImageView = itemView.series_poster
         var layout: LinearLayout = itemView.linear_layout
+
+
     }
 }

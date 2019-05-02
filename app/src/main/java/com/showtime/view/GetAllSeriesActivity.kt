@@ -50,7 +50,7 @@ class GetAllSeriesActivity : AppCompatActivity(), IMain {
     override fun updateView(seriesList: List<Series>) {
         var recyclerView: RecyclerView = recycler_view
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = SeriesAdapter(R.layout.row_layout, seriesList, this)
+        recyclerView.setAdapter(applicationContext.let { SeriesAdapter(R.layout.row_layout, seriesList, this) })
     }
 
 

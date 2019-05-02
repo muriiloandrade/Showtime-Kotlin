@@ -18,8 +18,8 @@ class MainActivity : AppCompatActivity() {
 
         message.text = "O melhor app de séries da humanidade humana"
 
-        botaoCadastrar = findViewById(R.id.btn_cadastrar_init)
-        botaoLogar = findViewById(R.id.btn_login_init)
+        botaoCadastrar = findViewById(R.id.btn_cadastrar_init) //referência do botão
+        botaoLogar = findViewById(R.id.btn_login_init) //referência do botão
 
 
         botaoCadastrar?.setOnClickListener {

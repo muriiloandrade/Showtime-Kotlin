@@ -54,7 +54,7 @@ class UserLoginActivity : AppCompatActivity() {
             val userToLogin = UserLogin(email, senha)
 
             val retrofit = Retrofit.Builder().addConverterFactory(GsonConverterFactory.create())
-                .baseUrl("http://192.168.1.13:5000/api/v1/users/")
+                .baseUrl("http://192.168.0.42:5000/api/v1/users/")
                 .build()
 
             val client = retrofit.create(ShowtimeApiInterface::class.java)
@@ -62,7 +62,7 @@ class UserLoginActivity : AppCompatActivity() {
 
             responseCall.enqueue(object : Callback<UserLogin> {
                 override fun onResponse(call: Call<UserLogin>?, response: Response<UserLogin>?) {
-                    if (response?.code() == 200) {
+                    if (response!!.code() == 200) {
                         Toast.makeText(context, "Login efetuado com sucesso!", Toast.LENGTH_SHORT).show()
                         var clickintent = Intent(this@UserLoginActivity, GetAllSeriesActivity::class.java)
                         startActivity(clickintent)
